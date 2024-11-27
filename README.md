@@ -46,7 +46,7 @@ The ResearchDB platform provides visualization and analysis tools to understand:
 ### Installation Steps
 1. Clone the repository:
  ```
-   git clone [repository-url]
+   git clone https://github.com/Yash-Shindey/researcher-platform.git
    cd researcher-platform
    npm install
 ```
