@@ -51,10 +51,17 @@ The ResearchDB platform provides visualization and analysis tools to understand:
    npm install
 ```
 2.	Start the MongoDB server locally.
-3.	Set up and start the server:
+```
+brew tap mongodb/brew
+```
 
 ```
- cd apps/server
+brew services start mongodb/brew/mongodb-community
+```
+4.	Set up and start the server:
+
+```
+ cd researcher-platform/apps/server
  npm install
  npm run import-data   # Import researcher data into MongoDB
  npm run dev           # Start the server
@@ -62,7 +69,7 @@ The ResearchDB platform provides visualization and analysis tools to understand:
 
 4.	In a new terminal, set up and start the client:
 ```
-cd apps/client
+cd researcher-platform/apps/client
 npm install
 npm run dev
 ```
