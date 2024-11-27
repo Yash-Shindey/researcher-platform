@@ -1,4 +1,4 @@
-Here’s the entire README formatted into a single code block for easy copying and use:
+
 
 # ResearchDB Platform
 
@@ -44,33 +44,33 @@ The ResearchDB platform provides visualization and analysis tools to understand:
 - **MongoDB** (local installation)
 
 ### Installation Steps
-
 1. Clone the repository:
-   ```bash
+ ```
    git clone [repository-url]
    cd researcher-platform
    npm install
+```
+2.	Start the MongoDB server locally.
+3.	Set up and start the server:
 
-	2.	Start the MongoDB server locally.
-	3.	Set up and start the server:
+```
+ cd apps/server
+ npm install
+ npm run import-data   # Import researcher data into MongoDB
+ npm run dev           # Start the server
+```
 
-cd apps/server
-npm install
-npm run import-data   # Import researcher data into MongoDB
-npm run dev           # Start the server
-
-
-	4.	In a new terminal, set up and start the client:
-
+4.	In a new terminal, set up and start the client:
+```
 cd apps/client
 npm install
 npm run dev
+```
 
-
-	5.	Access the application in your browser at:
+5.	Access the application in your browser at:
 http://localhost:5173
 
-Tech Stack
+## Tech Stack
 
 	•	Frontend: React with TypeScript
 	•	Backend: Node.js, Express
@@ -78,16 +78,16 @@ Tech Stack
 	•	State Management: Zustand
 	•	Visualization: Recharts
 
-Project Structure
-
-researcher-platform/
+## Project Structure
+```
+researcher-platform/ 
 ├── apps/
 │   ├── client/         # React frontend
 │   └── server/         # Node.js backend
 └── packages/           # Shared packages
+```
 
-Version
+## Version
 
 v1.0 - Initial Release
 
-This is now fully contained within a single Markdown code block. You can paste it directly into any editor that supports Markdown, and it will render correctly. Let me know if this works!
