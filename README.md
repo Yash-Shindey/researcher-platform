@@ -1,81 +1,95 @@
-# Turborepo starter
+# ResearchDB Platform
 
-This is an official starter Turborepo.
+A platform for exploring and analyzing research data from Indian academic institutions.
 
-## Using this example
+---
 
-Run the following command:
+## Overview
+The ResearchDB platform provides visualization and analysis tools to understand:
+- Researcher contributions
+- Institutional standings
+- Research field distributions across India's academic landscape
 
-```sh
-npx create-turbo@latest
+---
+
+## Features
+
+### Dashboard
+- **Total Metrics**: Researchers, institutions, and country-level data.
+- **Top Institutions**: Visualization of top institutions by researcher count.
+- **Leading Researchers**: Ranked by citation metrics.
+- **Distribution Charts**: Institution-wise analysis.
+
+### Researcher Search
+- **Filters**: Search researchers by field and institution.
+- **Detailed Profiles**:
+  - H-index metrics
+  - Citation counts
+  - Field rankings
+  - Institutional affiliations
+
+### Data Coverage
+- **Researchers**: 2,939
+- **Institutions**: 882
+- **Metrics**: Citation data, field classifications, and institutional rankings.
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+- **Node.js** (with npm)
+- **MongoDB** (local installation)
+
+### Installation Steps
+
+1.Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd researcher-platform```
+
+2.Install root dependencies:
+
+  ```bash
+  npm install```
+
+
+3.Start the MongoDB server locally.
+4.Set up and start the server:
+```bash
+cd apps/server
+npm install
+npm run import-data   # Import researcher data into MongoDB
+npm run dev           # Start the server
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+5.In a new terminal, set up and start the client:
+```bash
+cd apps/client
+npm install
+npm run dev
 ```
 
-### Develop
+6.Access the application in your browser at:
+http://localhost:5173
 
-To develop all apps and packages, run the following command:
+## Tech Stack
 
-```
-cd my-turborepo
-pnpm dev
-```
+	•	Frontend: React with TypeScript
+	•	Backend: Node.js, Express
+	•	Database: MongoDB
+	•	State Management: Zustand
+	•	Visualization: Recharts
 
-### Remote Caching
+## Project Structure
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+researcher-platform/
+├── apps/
+│   ├── client/         # React frontend
+│   └── server/         # Node.js backend
+└── packages/           # Shared packages
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+## Version
 
-```
-cd my-turborepo
-npx turbo login
-```
+v1.0 - Initial Release
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
