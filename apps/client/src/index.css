@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 
+           focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+           transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300
+           focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2
+           transition-colors duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm
+           focus:outline-none focus:ring-indigo-500 focus:border-indigo-500
+           placeholder-gray-400;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium
+           hover:bg-gray-100 transition-colors duration-200;
+  }
+}
+
+:root {
+  --primary-color: rgb(79, 70, 229);
+  --primary-hover: rgb(67, 56, 202);
+  --text-primary: rgb(17, 24, 39);
+  --text-secondary: rgb(107, 114, 128);
+  --bg-primary: rgb(249, 250, 251);
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+h1 {
+  @apply text-4xl font-bold text-gray-900 mb-4;
+}
+
+h2 {
+  @apply text-2xl font-bold text-gray-900 mb-3;
+}
+
+h3 {
+  @apply text-xl font-semibold text-gray-900 mb-2;
+}
