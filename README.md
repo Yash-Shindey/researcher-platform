@@ -1,8 +1,16 @@
 
 
+
 # ResearchDB Platform
 
 A platform for exploring and analyzing research data from Indian academic institutions.
+
+![Login](Login.png)
+
+![Dashboard](Dashboard.png)
+
+![Researchers](Researchers.png)
+
 
 ---
 
